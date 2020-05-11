@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+package calc;
+
+// interface
+service multiple{
+    rpc calcSend (SimpleRequest) returns (SimpleResponse) {}
+}
+
+// request
+message SimpleRequest{
+    int32 first = 1;
+    int32 second = 2;
+}
+
+// response
+message SimpleResponse{
+    int32 result_num = 1;
+}
